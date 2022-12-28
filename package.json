@@ -1,0 +1,26 @@
+{
+  "name": "first-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kafka:produce": "node kafka-demo/producer.js | npx pino-pretty",
+    "kafka:consume": "node kafka-demo/consumer.js | npx pino-pretty",
+    "mqtt:produce": "node mqtt-demo/producer.js | npx pino-pretty",
+    "mqtt:consume": "node mqtt-demo/consumer.js | npx pino-pretty",
+    "combine:produce": "node combine-demo/producer.js | npx pino-pretty",
+    "combine:middle": "node combine-demo/middle.js | npx pino-pretty",
+    "combine:consume": "node combine-demo/consumer.js | npx pino-pretty"
+  },
+  "keywords": [],
+  "author": "Nabeel Danish",
+  "license": "ISC",
+  "dependencies": {
+    "async-mqtt": "^2.6.3",
+    "kafkajs": "^2.2.3",
+    "pino": "^8.8.0"
+  },
+  "devDependencies": {
+    "pino-pretty": "^9.1.1"
+  }
+}
